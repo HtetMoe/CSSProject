@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+
+      body {
+            font-family: Arial, sans-serif;
+
+            margin: 0;
+            padding: 0;
+
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            /* 
+               - main container, full heigh of the viewport
+               - to ensuer a sticky footer
+             */
+            min-height: 100vh;
+        }
+
+        /* Login Container by Moe */
+        .login-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .login-container label {
+            margin-right: 5px;
+        }
+
+        .login-container input {
+            margin-right: 10px;
+            padding: 10px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+
+        .login-container button {
+            padding: 10px;
+            background-color: #00558c;
+            color: white;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Header by Moe -->
+    <header style="background-color: #0072b1; color: white; padding: 10px 20px;">
+       
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+            
+            <!-- left side -->
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="../image.jpeg"
+                    style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+
+                <h2>Maharishi International University</h2>
+            </div>
+
+            <!-- right side -->
+            <div class="login-container">
+                <label for="userID">User Id:</label>
+                <input type="text" id="userID" name="user-id">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+
+                <button type="button">Log In</button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div style="display: grid; grid-template-columns: 200px 1fr;">
+        <nav class="side-menu">
+            <ul>
+                <li><a href="#">Welcome</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Site Browser</a></li>
+                <li><a href="#">Reset Password</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <!-- Footer by Moe -->
+    <footer style="  background-color: #00274d; color: white; padding: 20px; text-align: center;">
+        <div style="display: flex; justify-content: space-around; text-align: center;">
+            
+            <div style="margin-bottom: 10px; display: flex; gap: 10px;">
+                <a href="#" style="color: white;">Gateway</a>
+                <a href="#" style="color: white;">Accessibility Information</a>
+                <a href="#" style="color: white;">The Sakai Project</a>
+            </div>
+
+            <!-- used reserved char  -->
+            <p> &copy; 2003-2024 The Apereo Foundation. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

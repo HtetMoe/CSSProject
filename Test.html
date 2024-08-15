@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Page with Header and Footer</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #0072b1;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        .login-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .login-container label {
+            margin-right: 5px;
+        }
+
+        .login-container input {
+            margin-right: 10px;
+            padding: 5px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+
+        .login-container button {
+            padding: 5px 10px;
+            background-color: #00558c;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .features {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .features h2 {
+            color: #0072b1;
+        }
+
+        .feature-boxes {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .feature-box {
+            background-color: #00274d;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            width: 30%;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #00274d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-links {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <img src="../assignment1/sunset.jpg" alt="University Logo" class="logo">
+            <h1>Maharishi International University</h1>
+            <div class="login-container">
+                <label for="user-id">User Id:</label>
+                <input type="text" id="user-id" name="user-id">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+                <button type="button">Log In</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="features">
+            <h2>Features</h2>
+            <p>Sakai's breadth of features means you can choose the tools that meet your needs...</p>
+            <div class="feature-boxes">
+                <div class="feature-box">Communication and Collaboration</div>
+                <div class="feature-box">Grading and Assessment</div>
+                <div class="feature-box">Content Development and Delivery</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="#">Gateway</a>
+                <a href="#">Accessibility Information</a>
+                <a href="#">The Sakai Project</a>
+            </div>
+            <p>&copy; 2003-2024 The Apereo Foundation. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
