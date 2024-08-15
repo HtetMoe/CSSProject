@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <style>
-
-      body {
+        body {
             font-family: Arial, sans-serif;
 
             margin: 0;
             padding: 0;
 
-            display: grid;
-            grid-template-rows: auto 1fr auto;
             /* 
                - main container, full heigh of the viewport
                - to ensuer a sticky footer
@@ -26,6 +22,9 @@
         .login-container {
             display: flex;
             align-items: center;
+            position: absolute;
+            right: 100px;
+            padding:10px;
         }
 
         .login-container label {
@@ -43,27 +42,184 @@
             padding: 10px;
             background-color: #00558c;
             color: white;
+            border: none;
             border-radius: 3px;
             cursor: pointer;
         }
 
+        .gird_container{
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            margin-left: 5px;
+            top:90px;
+            padding: 10px 20px;
+        }
+        .side_menu{
+            border-right: 1px solid lightgray;
+            height: 100vh;
+            width: 200px;
+            text-align: left;
+            position: fixed;
+            z-index: 1000;
+            top: 90px;
+            padding: 10px ;
+
+        }
+        .div_hover{
+            list-style-type: none;
+            font-size: 17px;
+            padding: 7px;
+        }
+        .div_hover:hover{
+            background-color: #e0e0e0;
+            border-radius: 0 15px 15px 0; /* Rounded border on the right end */
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        img{
+            width: 18px;
+            margin-right: 5px;
+            
+        }
+        .grid_item2{
+            position: fixed;
+            top: 40px;
+            padding:10px 20px;
+            left: 225px;
+            margin-left: 1px;
+            width: 100%;
+            
+        }
+        .header_div{
+            position: fixed; 
+            background-color: #0072b1; 
+            color: white; 
+            padding: 10px 20px;
+            width: 100%;
+            z-index: 1000;
+            margin-bottom: 1px;
+            height: 90px;
+            top: 0;
+            left: 0;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .fixed_div_grid2{
+            display: flex;
+            padding: 10px 20px; 
+            width:100%; 
+            height: 40px; 
+            position: sticky;
+        }
+        .relative_div_grid2{
+            top:50px;
+            width: 100%; 
+            height: 100vh;
+            position: absolute;
+            left:20px ;
+            top:0px;
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll; /* Enable vertical scrolling */
+            scroll-snap-align: start;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            padding: 50px;
+            display: flex;
+            justify-content: flex-end; /* Align content to the right */
+            max-width: 3000px; /* Adjust as needed */
+            margin: 0 auto;
+        }
+        .content {
+            width: 85%; /* Adjust as needed */
+        }
+        .about-section {
+            background-color: #e7ecef;
+            padding: 20px;
+            text-align: left;
+        }
+        .about-section h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .about-section p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .icons-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #ffffff;
+            
+        }
+        .icon-box {
+            text-align: center;
+            flex: 1;
+            padding: 10px;
+        }
+        .icon-box img {
+            width: 300px;
+            height: 250px;
+            margin-bottom: 10px;
+        }
+        .icon-box p {
+            margin: 0;
+            font-size: 1em;
+        }
+        .footer {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: #ffffff;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+        .footer-box {
+            padding: 20px;
+            background-color: #ffffff;
+            color: #000000c0;
+            border: 1px solid #000000e4;
+            border-radius: 10px;
+            max-width: 800px;
+            width: 100%;
+        }
+        .footer p {
+            margin: 10px 0;
+            font-size: 1em;
+            text-align: start;
+        }
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
-
 <body>
-    <!-- Header by Moe -->
-    <header style="background-color: #0072b1; color: white; padding: 10px 20px;">
+<div class="header_div">
+   <!-- <header style="position: fixed; background-color: #0072b1; color: white; padding: 10px 20px;"> -->
        
-        <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px;"> 
             
             <!-- left side -->
-            <div style="display: flex; align-items: center; gap: 10px;">
-                <img src="../image.jpeg"
-                    style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
-
-                <h2>Maharishi International University</h2>
+             <div style="left: 0px; padding: 5px 20px;">
+               <img src="./Screenshot 2024-07-25 at 6.00.44 AM.png"
+                    style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;  ">
             </div>
-
+            <div style="border: 1px soild red;">Maharishi International University</div>
+      </div>
             <!-- right side -->
             <div class="login-container">
                 <label for="userID">User Id:</label>
@@ -75,26 +231,67 @@
                 <button type="button">Log In</button>
             </div>
 
+     <!--  </div> --> 
+   <!-- </header> -->
+</div>
+
+    <!--Asma part starts here-->
+    <br><br/>
+    <div class="gird_container" style="display: grid;">
+        <div class = "side_menu">
+            <div class="div_hover"><a href="#"><img src="./Screenshot 2024-07-24 at 8.27.06 PM.png">welcome</a></div>
+            <div class="div_hover"><a href="#"><img src="./Screenshot 2024-07-24 at 8.27.16 PM.png"/> FAQ</a></div>
+            <div class="div_hover"><a href="#"><img src="./Screenshot 2024-07-24 at 8.27.16 PM.png"/> Features</a></div>
+            <div class="div_hover"><a href="#"><img src="./Screenshot 2024-07-24 at 8.27.16 PM.png"/>Site Browser</a> </div>
+            <div class="div_hover"><a href="#"><img src="./Screenshot 2024-07-24 at 8.27.26 PM.png"/>Rest Password</a> </div>
+            <div class="div_hover"><a href="#"><img src="./Screenshot 2024-07-24 at 8.27.34 PM.png"/>Help</a></div>       
         </div>
-    </header>
-
-    <!-- Main Content -->
-    <div style="display: grid; grid-template-columns: 200px 1fr;">
-        <nav class="side-menu">
-            <ul>
-                <li><a href="#">Welcome</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Site Browser</a></li>
-                <li><a href="#">Reset Password</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </nav>
-
+        <!--Asmaa part ends here-->
+        <div class="grid_item2">
+        
+               <!-- <div class="relative_div_grid2"> -->
+                   <!--Hana Code stasts here--> 
+                   <div class=" container, relative_div_grid2">
+                    <div class="content">
+                        <div class="about-section">
+                    <h1>About Sakai</h1>
+                    <p>Sakai is a set of software tools designed to help instructors, researchers, and students create websites for</p>
+                    <p> collaboration. Using a web browser, users choose from a set of features to create a site that meets their needs.</p>
+                    </div>
+                <div class="icons-container">
+                    <div class="icon-box">
+                        <img src="./laboratory.png" alt="Researcher Icon">
+                        <p>A researcher can create a website </p>
+                        <p>for collaboration on a project with colleagues.</p>
+                    </div>
+                    <div class="icon-box">
+                        <img src="./student icon.jpg" alt="Instructor Icon">
+                        <p>An instructor can create a website</p>
+                        <p> that serves as an online discussion </p>
+                         <p>board for students to collaborate on an assignment.</p>
+                    </div>
+                    <div class="icon-box">
+                        <img src="./student icon.jpg" alt="Student Icon">
+                        <p>A student can create a site for a</p>
+                        <p>study group or for extra curricular</p>
+                        <p>activities (depending on institutional policy).</p>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="footer-box">
+                    <p>Sakai is a part of the <a href="https://www.apereo.org" target="_blank">Apereo Foundation</a> (<a href="https://www.apereo.org" target="_blank">https://www.apereo.org</a>). An overview of Sakai can be found at </p>
+                    <p><a href="https://www.sakaiproject.org/" target="_blank">https://www.sakaiproject.org/</a>.</p>
+                    <p>For more information, contact the <a href="mailto:sakai-coordinator@example.com">Sakai Community Coordinator</a>.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Hanna Code ends here-->
+     <!--  </div> --> 
+                
     </div>
-
-    <!-- Footer by Moe -->
-    <footer style="  background-color: #00274d; color: white; padding: 20px; text-align: center;">
+         <!-- Footer by Moe -->
+    <footer style=" position: absolute; bottom: 0px; left: 245px; width: 81%;  background-color: #00274d; color: white; padding: 20px; text-align: center;">
         <div style="display: flex; justify-content: space-around; text-align: center;">
             
             <div style="margin-bottom: 10px; display: flex; gap: 10px;">
@@ -106,7 +303,9 @@
             <!-- used reserved char  -->
             <p> &copy; 2003-2024 The Apereo Foundation. All rights reserved.</p>
         </div>
-    </footer>
+    </footer>   
+        </div> 
+    </div>  
+    
 </body>
-
 </html>
